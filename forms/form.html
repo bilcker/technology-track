@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>My Contact Form</title>
+  </head>
+  <body>
+    <p>This is my page</p>
+    <form action="registration-success.html" method="post" class="form" id="form1">
+      <fieldset>
+        <legend>Enter Your Name</legend>
+        <div class="form__item">
+          <label for="first-name">First Name:</label>
+          <input type="text" id="first-name" name="user_last_name">
+        </div>
+        <div class="form__item">
+          <label for="last-name">Last Name:</label>
+          <input type="text" id="last-name" name="user_first_name">
+        </div>
+      </fieldset>
+      <fieldset>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="user_email">
+      </fieldset>
+      <fieldset>
+        <div class="form__item">
+          <label for="password">Password:</label>
+          <input type="text" id="password" name="user_password">
+        </div>
+        <div class="form__item">
+          <label for="cfrm-password">Confirm Password:</label>
+          <input type="text" id="cfrm-password" name="cfrm_user_password">
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Sex</legend>
+        <ul class="form__item">
+          <li>
+            <label for="sex-male">Male</label>
+            <input type="radio" id="sex-male" name="sex" value="sex-male">
+          </li>
+          <li>
+            <label for="sex-female">Female</label>
+            <input type="radio" id="sex-female" name="sex" value="sex-female">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Technology Track Checklist</legend>
+        <ul class="form__item">
+          <li>
+            <label for="tech-check-intro">Introduction</label>
+            <input type="checkbox" id="tech-check-intro" name="tech-check-intro" value="tech-check-intro">
+          </li>
+          <li>
+            <label for="tech-check-text">Tags: Text</label>
+            <input type="checkbox" id="tech-check-text" name="tech-check-text" value="tech-check-text">
+          </li>
+          <li>
+            <label for="tech-check-structure">Tags: Structure</label>
+            <input type="checkbox" id="tech-check-structure" name="tech-check-structure" value="tech-check-structure">
+          </li>
+          <li>
+            <label for="tech-check-tables">Tags: Tables</label>
+            <input type="checkbox" id="tech-check-tables" name="tech-check-tables" value="tech-check-tables">
+          </li>
+          <li>
+            <label for="tech-check-forms">Tags: Forms</label>
+            <input type="checkbox" id="tech-check-forms" name="tech-check-forms" value="tech-check-forms">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <label for="fav">Select your favourite segment so far</label>
+        <select name="favourite" id="fav">
+          <option value="intro">Introduction</option>
+          <option value="tags-text">Tags: Text</option>
+          <option value="tags-structure">Tags: Structure</option>
+          <option value="tags-tables">Tags: Tables</option>
+          <option value="tags-forms">Tags: Forms</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <button type="submit">Submit Me</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
