@@ -11,7 +11,8 @@
       "minItems": 1,
       "options": {
         "disable_properties": true,
-        "disable_edit_json": true
+        "disable_edit_json": true,
+        "collapsed": true
       },
       "properties": {
         "success": {
@@ -19,7 +20,8 @@
           "title": "Success Feedback",
           "options": {
             "disable_properties": true,
-            "disable_edit_json": true
+            "disable_edit_json": true,
+            "collapsed": true
           },
           "properties": {
             "text": {
@@ -33,7 +35,8 @@
               "title": "Success Image",
               "options": {
                 "disable_properties": true,
-                "disable_edit_json": true
+                "disable_edit_json": true,
+                "collapsed": true
               },
               "properties": {
                 "src": {
@@ -81,7 +84,6 @@
             "disable_properties": true,
             "disable_edit_json": true,
             "collapsed": true,
-            "hidden": true
           },
           "properties": {
             "text": {
@@ -95,7 +97,8 @@
               "title": "Fail Image",
               "options": {
                 "disable_properties": true,
-                "disable_edit_json": true
+                "disable_edit_json": true,
+                "collapsed": true
               },
               "properties": {
                 "src": {
