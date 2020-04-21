@@ -1,148 +1,144 @@
 {
-  "definitions": {
-    "feedback": {
-      "type": "array",
-      "title": "Feedback",
-      "required": true,
+  "type": "array",
+  "title": "Feedback",
+  "required": true,
+  "minItems": 1,
+  "maxItems": 1,
+  "items": [
+    {
+      "type": "object",
+      "title": "Feeback Options",
       "minItems": 1,
-      "maxItems": 1,
-      "items": [
-        {
+      "options": {
+        "disable_properties": true,
+        "disable_edit_json": true
+      },
+      "properties": {
+        "success": {
           "type": "object",
-          "title": "Feeback Options",
-          "minItems": 1,
+          "title": "Success Feedback",
           "options": {
             "disable_properties": true,
             "disable_edit_json": true
           },
           "properties": {
-            "success": {
+            "text": {
+              "type": "string",
+              "title": "Success Text",
+              "description": "Text that the user will see after completion.",
+              "required": true
+            },
+            "image": {
               "type": "object",
-              "title": "Success Feedback",
+              "title": "Success Image",
               "options": {
                 "disable_properties": true,
                 "disable_edit_json": true
               },
               "properties": {
-                "text": {
+                "src": {
                   "type": "string",
-                  "title": "Success Text",
-                  "description": "Text that the user will see after completion.",
-                  "required": true
+                  "title": "Image Source",
+                  "description": "Image source will overwrite icon. Choose Image, Icon or neither."
                 },
-                "image": {
-                  "type": "object",
-                  "title": "Success Image",
-                  "options": {
-                    "disable_properties": true,
-                    "disable_edit_json": true
-                  },
-                  "properties": {
-                    "src": {
-                      "type": "string",
-                      "title": "Image Source",
-                      "description": "Image source will overwrite icon. Choose Image, Icon or neither."
-                    },
-                    "alt": {
-                      "type": "string",
-                      "title": "Image Alt Text",
-                      "description": "If using an image you must use image alt text."
-                    }
-                  }
-                },
-                "icon": {
+                "alt": {
                   "type": "string",
-                  "title": "Success Icon",
-                  "description": "Image source will overwrite icon. Choose Image, Icon or neither.",
-                  "enum": [
-                    "thumbs-up",
-                    "check",
-                    "check-circle-o",
-                    "star",
-                    "smile-o"
-                  ],
-                  "options": {
-                    "enum_titles": [
-                      "Thumbs Up",
-                      "Check Mark",
-                      "Circled Check Mark",
-                      "Star",
-                      "Smiley"
-                    ]
-                  }
+                  "title": "Image Alt Text",
+                  "description": "If using an image you must use image alt text."
                 }
-              },
-              "required": [
-                "text"
-              ]
+              }
             },
-            "fail": {
-              "type": "object",
-              "title": "Fail Feedback",
+            "icon": {
+              "type": "string",
+              "title": "Success Icon",
+              "description": "Image source will overwrite icon. Choose Image, Icon or neither.",
+              "enum": [
+                "thumbs-up",
+                "check",
+                "check-circle-o",
+                "star",
+                "smile-o"
+              ],
               "options": {
-                "disable_properties": true,
-                "disable_edit_json": true,
-                "collapsed": true,
-                "hidden": true
-              },
-              "properties": {
-                "text": {
-                  "type": "string",
-                  "title": "Fail Text",
-                  "description": "Text that the user will see after a failed attemp.",
-                  "required": true
-                },
-                "image": {
-                  "type": "object",
-                  "title": "Fail Image",
-                  "options": {
-                    "disable_properties": true,
-                    "disable_edit_json": true
-                  },
-                  "properties": {
-                    "src": {
-                      "type": "string",
-                      "title": "Image Source",
-                      "description": "Image source will overwrite icon. Choose Image, Icon or neither."
-                    },
-                    "alt": {
-                      "type": "string",
-                      "title": "Image Alt Text",
-                      "description": "If using an image you must use image alt text."
-                    }
-                  }
-                },
-                "icon": {
-                  "type": "string",
-                  "title": "Fail Icon",
-                  "description": "Image source will overwrite icon. Choose Image, Icon or neither.",
-                  "enum": [
-                    "thumbs-down",
-                    "times",
-                    "times-circle-o",
-                    "frown-o"
-                  ],
-                  "options": {
-                    "enum_titles": [
-                      "Thumbs Down",
-                      "Cross (X)",
-                      "Circled Cross (X)",
-                      "Frown Face"
-                    ]
-                  }
-                }
-              },
-              "required": [
-                "text"
-              ]
+                "enum_titles": [
+                  "Thumbs Up",
+                  "Check Mark",
+                  "Circled Check Mark",
+                  "Star",
+                  "Smiley"
+                ]
+              }
             }
           },
           "required": [
-            "success",
-            "fail"
+            "text"
+          ]
+        },
+        "fail": {
+          "type": "object",
+          "title": "Fail Feedback",
+          "options": {
+            "disable_properties": true,
+            "disable_edit_json": true,
+            "collapsed": true,
+            "hidden": true
+          },
+          "properties": {
+            "text": {
+              "type": "string",
+              "title": "Fail Text",
+              "description": "Text that the user will see after a failed attemp.",
+              "required": true
+            },
+            "image": {
+              "type": "object",
+              "title": "Fail Image",
+              "options": {
+                "disable_properties": true,
+                "disable_edit_json": true
+              },
+              "properties": {
+                "src": {
+                  "type": "string",
+                  "title": "Image Source",
+                  "description": "Image source will overwrite icon. Choose Image, Icon or neither."
+                },
+                "alt": {
+                  "type": "string",
+                  "title": "Image Alt Text",
+                  "description": "If using an image you must use image alt text."
+                }
+              }
+            },
+            "icon": {
+              "type": "string",
+              "title": "Fail Icon",
+              "description": "Image source will overwrite icon. Choose Image, Icon or neither.",
+              "enum": [
+                "thumbs-down",
+                "times",
+                "times-circle-o",
+                "frown-o"
+              ],
+              "options": {
+                "enum_titles": [
+                  "Thumbs Down",
+                  "Cross (X)",
+                  "Circled Cross (X)",
+                  "Frown Face"
+                ]
+              }
+            }
+          },
+          "required": [
+            "text"
           ]
         }
+      },
+      "required": [
+        "success",
+        "fail"
       ]
     }
-  }
+  ]
 }
